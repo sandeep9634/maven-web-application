@@ -4,6 +4,13 @@ agent any
 tools{
 maven "Maven3.8.6"
 }
+triggers {
+  pollSCM ('* * * * *')
+}
+options {
+  timestamps()
+  buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '4', daysToKeepStr: '', numToKeepStr: '5')
+}
 
 stages {
 
