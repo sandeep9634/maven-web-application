@@ -22,7 +22,7 @@ stages {
 stage('CheckoutCode'){
 steps{
 notifyBuild("started")
-git branch: $(params.BranchName) credentialsId: '38db5186-845e-41ab-849c-66af359b6f34', url: 'https://github.com/sandeep9634/maven-web-application.git'
+git branch: "$(params.BranchName)" credentialsId: '38db5186-845e-41ab-849c-66af359b6f34', url: 'https://github.com/sandeep9634/maven-web-application.git'
 }
 }
 
