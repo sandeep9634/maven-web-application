@@ -1,6 +1,10 @@
 pipeline {
 agent any
 
+parameters {
+  choice choices: ['master', 'development', 'qa'], description: 'select branch name', name: 'BranchName'
+}
+
 tools{
 maven "Maven3.8.6"
 }
